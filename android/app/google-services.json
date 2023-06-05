@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "370238857317",
+    "project_id": "locker-suites",
+    "storage_bucket": "locker-suites.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370238857317:android:da917873a8413531de268c",
+        "android_client_info": {
+          "package_name": "com.lockersuites.dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370238857317-gbc49kjsj1f1m9e4jk3n0mbb9r1sq5uk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOvxBbJ17jhNaPo51_hadmQDiZs-89Pqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370238857317-gbc49kjsj1f1m9e4jk3n0mbb9r1sq5uk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "370238857317-heiplncj1f30gpida04m33jtaa8u83ql.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.locker-suites.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

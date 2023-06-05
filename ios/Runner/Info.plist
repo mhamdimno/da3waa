@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Locker Suites</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>lockersuites</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.370238857317-v3tugsi077e455e85d7tb41gvqafpt6u</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Bundle ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>in</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FirebaseDynamicLinksCustomDomains</key>
+	<array>
+		<string>http://lockersuites.page.link/dashboard</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Please Allow For App To Use Camera To update and change avatar account </string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>Please Allow For App To Use Files To open pdf project report</string>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string>Please Allow For App To Use Files To open pdf project report</string>
+	<key>NSFileProviderPresenceUsageDescription</key>
+	<string>Please Allow For App To Use Files To open pdf project report</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Please Allow For App To Use Location To Know Distance from You And Places</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please Allow For App To Use Location To Know Distance from You And Places</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Please Allow For App To Use Location To Know Distance from You And Places</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please Allow For App To Use Location To Know Distance from You And Places</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please Allow For App To Use Gallery To update and change avatar account </string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>http://lockersuites.page.link/dashboard</string>
+	</array>
+	<key>com.apple.security.network.client</key>
+	<true/>
+	<key>io.flutter.embedded_views_preview</key>
+	<string>YES</string>
+</dict>
+</plist>

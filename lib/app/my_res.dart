@@ -1,0 +1,30 @@
+export 'functios.dart';
+export '../presentation/resources/routes_manager.dart';
+export 'package:get/get.dart';
+export 'package:flutter/material.dart';
+export 'package:da3wa/data/network/networkLayer.dart';
+export 'package:da3wa/data/mapper/paramters_keys.dart';
+export 'package:da3wa/presentation/effects/animations.dart';
+export 'package:da3wa/presentation/modules/base_view_view_model.dart';
+export 'package:da3wa/presentation/resources/inputs_managers.dart';
+export 'package:da3wa/presentation/resources/buttons_manger.dart';
+export 'package:da3wa/presentation/resources/buttons_manger.dart';
+export 'package:da3wa/presentation/resources/constants_manager.dart';
+export 'package:da3wa/presentation/resources/values_manager.dart';
+export 'package:da3wa/presentation/resources/strings_manager.dart';
+export 'package:da3wa/presentation/resources/colors_manager.dart';
+export 'package:da3wa/presentation/resources/assets_manager.dart';
+export 'package:da3wa/presentation/resources/texts_manager.dart';
+export 'package:da3wa/presentation/widgets/common_widget_manager.dart';
+export 'package:da3wa/data/mapper/decodable.dart';
+export 'package:da3wa/domain/model/appModel.dart';
+export 'package:da3wa/presentation/modules/base_controller.dart';
+export 'package:da3wa/data/network/appUrls.dart';
+export 'app_prefs.dart';
+export 'navigation.dart';
+export 'functios.dart';
+export 'package:da3wa/presentation/widgets/app_scaffold.dart';
+
+
+export 'package:da3wa/app/enums.dart';
+export 'package:da3wa/app/extentions/widgets_extentions.dart';
