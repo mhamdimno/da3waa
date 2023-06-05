@@ -17,6 +17,6 @@ class AppStrings {
   static String confirm = "تاكيد";
   static String login = "login";
 
-  static String toPoint(String? v) => "${v} points";
+  static String toPoint(int? v) => "${v} points";
 
 }

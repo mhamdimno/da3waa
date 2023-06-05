@@ -19,7 +19,6 @@ class DashboardBinding extends Bindings {
 
 //CONTROLLER
 class DashboardController extends BaseController {
-  List<Cat?> arrCats=[];
 
 
   //PROBERITY
@@ -36,12 +35,7 @@ class DashboardController extends BaseController {
   void setupUI() {
     // TODO: implement setupUI
     super.setupUI();
-      FBManager.loadCats().then((value) {
-      arrCats=value;
-      print('🙄 value${value}');
 
-      update();
-    });
   }
 
 

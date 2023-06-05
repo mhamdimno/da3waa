@@ -29,18 +29,22 @@ class DashboardSC extends BaseView<DashboardController> {
         children: [
           AppImages.dollar
 ,
-
-          ModelStreamSingleBuilder<User>(
-// you're query to stream first result
-          query: (q) => q.orderBy('points'),
-// pass document id if you need to stream only dis document
-          docId: AppStorage.uuid,
-          onLoading: ()=>nl,
-          onError: (_)=>nl,
-          builder: (_, snapshot) {
-          return   snapshot.data?.points?.toString().toTextWidget("b16_cnl") ?? nl;
-
-          }),
+          FutureBuilder<String>(
+            future: FBManager.user, // async work
+            builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+              switch (snapshot.connectionState) {
+                case ConnectionState.waiting: return Text('Loading....');
+                default:
+                  if (snapshot.hasError)
+                    return Text('Error: ${snapshot.error}');
+                  else
+                    return Text('Result: ${snapshot.data}');
+              }
+            },
+          )
+        FutureBuilder(builder: (v,vv){
+          return FBManager.user.then((value) => AppStrings.value.title.toTextWidget("r12"),)
+        }),
         ],
       ).setSpaceBetweenChildrens(8),
       Row(
@@ -65,7 +69,7 @@ class DashboardSC extends BaseView<DashboardController> {
 
         ],
                 ).toCustomWidget(backgroundColor: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12).addTapGesture(() {
-                  FBManager.increasePoints(points: cat?.points ?? 0);
+                  FBManager.increasePoints(cat?.points ?? 0);
                 });
       } )
 

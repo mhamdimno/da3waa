@@ -2,7 +2,7 @@ import 'package:firestore_model/firestore_model.dart';
 
 class Cat extends FirestoreModel<Cat> {
   String? name;
-  String? points;
+  int? points;
   String? desc;
 
   Cat({this.name, this.points,this.desc});
