@@ -5,13 +5,14 @@ import '../../app/my_res.dart';
 
 class AppToasts{
   static _showToast(ToastType typ,String msg){
-    showTopSnackBar(Get.context!, CustomSnackBar.info(message: msg));
+    showTopSnackBar(       Overlay.of(Get.context!),
+        CustomSnackBar.info(message: msg));
   }
 
  static showError(String? msg,{bool showToast=true}) {
     if (msg != null && showToast) {
       showTopSnackBar(
-        Get.context!,
+       Overlay.of(Get.context!),
         CustomSnackBar.error(message: msg),
       );
 
@@ -20,7 +21,7 @@ class AppToasts{
   static showMessage(String? msg) {
     if (msg != null) {
       showTopSnackBar(
-        Get.context!,
+        Overlay.of(Get.context!),
         CustomSnackBar.success(message: msg),
       );
     }

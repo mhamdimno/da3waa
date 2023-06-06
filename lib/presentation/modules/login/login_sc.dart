@@ -10,7 +10,7 @@ class login_sc extends BaseView<login_con> {
   Widget vBuilder() => AppScaffold(
       isTransparent: true,
       children: [
-
+AppImages.logo,
         CustomTextField(con.nameTEC),
         ElevatedButton(onPressed: ()=>con.login(), child: AppStrings.login.toTextWidget("r12")),
 

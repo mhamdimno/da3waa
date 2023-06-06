@@ -1,3 +1,5 @@
+import 'package:da3wa/data/managers/trait.dart';
+
 import '../../../app/my_res.dart';
 
 //BINDING
@@ -28,7 +30,7 @@ class SplashController extends BaseController {
   void onReady() {
     super.onReady();
     setDelay(() {
-      Help.checkScreen();
+      Trait.CheckScreen();
     },seconds: AppConstants.splashDelay);
   //  2000.delay((){
       ;

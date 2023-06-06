@@ -29,22 +29,20 @@ class DashboardSC extends BaseView<DashboardController> {
         children: [
           AppImages.dollar
 ,
-          FutureBuilder<String>(
+          FutureBuilder<User?>(
             future: FBManager.user, // async work
-            builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+            builder: (BuildContext context, AsyncSnapshot<User?> snapshot) {
               switch (snapshot.connectionState) {
                 case ConnectionState.waiting: return Text('Loading....');
                 default:
                   if (snapshot.hasError)
                     return Text('Error: ${snapshot.error}');
                   else
-                    return Text('Result: ${snapshot.data}');
+                    return snapshot.data?.points?.toString().toTextWidget("b16_cnl") ?? nl;
               }
             },
-          )
-        FutureBuilder(builder: (v,vv){
-          return FBManager.user.then((value) => AppStrings.value.title.toTextWidget("r12"),)
-        }),
+          ),
+
         ],
       ).setSpaceBetweenChildrens(8),
       Row(
@@ -55,23 +53,28 @@ class DashboardSC extends BaseView<DashboardController> {
       ).setSpaceBetweenChildrens(8),
   ]),
 
+  ModelGetBuilder<Cat>(
+// you're query to get results
+  builder: (_, snapshot) {
+
+return       ListManager.CustomGridView(list: snapshot.data, crossAxisCount: 4, spacing: AppSize.s20, builder:(index){
+  Cat? cat =  snapshot.data?[index];
+  return Column(
+    children: [
+      //    category.image,
+      cat?.name.toTextWidget('r40') ?? nl,
+      cat?.desc.toTextWidget('r16cn') ?? nl,
+      AppStrings.toPoint(cat?.points).toTextWidget("r14g"),
 
 
-      ListManager.CustomGridView(list: con.arrCats, crossAxisCount: 4, spacing: AppSize.s20, builder:(index){
-        Cat? cat = con.arrCats[index];
-                return Column(
-                  children: [
-                //    category.image,
-                    cat?.name.toTextWidget('r40') ?? nl,
-                    cat?.desc.toTextWidget('r16cn') ?? nl,
-        AppStrings.toPoint(cat?.points).toTextWidget("r14g"),
+    ],
+  ).toCustomWidget(backgroundColor: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12).addTapGesture(() {
+    FBManager.increasePoints(cat?.points ?? 0);
+  });
+} )
+;
+  })
 
-
-        ],
-                ).toCustomWidget(backgroundColor: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12).addTapGesture(() {
-                  FBManager.increasePoints(cat?.points ?? 0);
-                });
-      } )
 
  ] );
 

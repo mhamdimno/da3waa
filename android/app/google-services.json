@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "370238857317",
-    "project_id": "locker-suites",
-    "storage_bucket": "locker-suites.appspot.com"
+    "project_number": "509044789263",
+    "project_id": "da3wa-d93b6",
+    "storage_bucket": "da3wa-d93b6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:370238857317:android:da917873a8413531de268c",
+        "mobilesdk_app_id": "1:509044789263:android:757ba1c53f35161f37d37a",
         "android_client_info": {
-          "package_name": "com.lockersuites.dashboard"
+          "package_name": "com.devmuslim.da3wa"
         }
       },
       "oauth_client": [
         {
-          "client_id": "370238857317-gbc49kjsj1f1m9e4jk3n0mbb9r1sq5uk.apps.googleusercontent.com",
+          "client_id": "509044789263-nsu8jm06i3gik7a2on2bhc1fo4nuil4l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAOvxBbJ17jhNaPo51_hadmQDiZs-89Pqg"
+          "current_key": "AIzaSyC3Wgu1iCpa2LXZVj5dqecctSGitaMmTi0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "370238857317-gbc49kjsj1f1m9e4jk3n0mbb9r1sq5uk.apps.googleusercontent.com",
+              "client_id": "509044789263-nsu8jm06i3gik7a2on2bhc1fo4nuil4l.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "370238857317-heiplncj1f30gpida04m33jtaa8u83ql.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.locker-suites.app"
-              }
             }
           ]
         }

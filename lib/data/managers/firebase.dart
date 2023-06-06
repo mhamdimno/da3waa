@@ -10,7 +10,10 @@ import '../../domain/remote/user.dart';
 class FBManager{
 
 
-  static  init(){
+  static  init() async{
+    await FirebaseApp.initializeApp(
+
+    );
     FirestoreModel.injectAll([User(),Cat()]);
 
 

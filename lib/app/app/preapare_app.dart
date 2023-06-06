@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:da3wa/data/managers/devive_manager.dart';
+import 'package:da3wa/data/managers/firebase.dart';
+import 'package:firestore_model/firestore_model.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get_storage/get_storage.dart';
@@ -14,7 +16,9 @@ Future prepareApp() async {
 
   await GetStorage.init();
   await DeviceManager.init();
+  await FBManager.init();
   Appthemes().changeThemeMode(ThemeMode.light);
+
   _configLoading();
   makeServiceSettings();
 

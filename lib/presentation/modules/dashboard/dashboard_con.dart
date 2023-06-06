@@ -1,12 +1,4 @@
-
-import 'package:da3wa/data/managers/fb_manager.dart';
-import 'package:da3wa/domain/remoteModels/categoty.dart';
-import 'package:flutter/foundation.dart';
-
 import '../../../app/my_res.dart';
-import '../../../data/managers/device_manager.dart';
-import '../../../data/managers/firebase.dart';
-import '../../../domain/localModels/profileModel.dart';
 
 
 //BINDING
