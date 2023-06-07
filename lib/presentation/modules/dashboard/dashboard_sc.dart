@@ -1,4 +1,5 @@
 
+import 'package:confirmation_success/confirmation_success.dart';
 import 'package:da3wa/presentation/modules/dashboard/drawer.dart';
 import 'package:da3wa/presentation/widgets/list_manager.dart';
 import 'package:firestore_model/firestore_model.dart';
@@ -29,22 +30,33 @@ class DashboardSC extends BaseView<DashboardController> {
         children: [
           AppImages.dollar
 ,
-          FutureBuilder<User?>(
-            future: FBManager.user, // async work
-            builder: (BuildContext context, AsyncSnapshot<User?> snapshot) {
-              switch (snapshot.connectionState) {
-                case ConnectionState.waiting: return Text('Loading....');
-                default:
-                  if (snapshot.hasError)
-                    return Text('Error: ${snapshot.error}');
-                  else
-                    return snapshot.data?.points?.toString().toTextWidget("b16_cnl") ?? nl;
-              }
-            },
-          ),
+      ModelStreamSingleBuilder<User>(
+// your query to stream first result
+          query: (q) => q.orderBy('createdAt'),
+// pass document id if you need to stream only this document
+          docId: AppStorage.uuid,
+          builder: (_, snapshot) {
+            return snapshot.data?.points?.toString().toTextWidget("b16_cnl") ?? nl;
+
+          })
+
+
 
         ],
       ).setSpaceBetweenChildrens(8),
+      FutureBuilder<User?>(
+        future: FBManager.user, // async work
+        builder: (BuildContext context, AsyncSnapshot<User?> snapshot) {
+          switch (snapshot.connectionState) {
+            case ConnectionState.waiting: return Text('Loading....');
+            default:
+              if (snapshot.hasError)
+                return Text('Error: ${snapshot.error}');
+              else
+                return snapshot.data?.name?.toString().toTextWidget("b16_cnl") ?? nl;
+          }
+        },
+      ),
       Row(
         children: [
           AppImages.sort,
@@ -62,17 +74,30 @@ return       ListManager.CustomGridView(list: snapshot.data, crossAxisCount: 4, 
   return Column(
     children: [
       //    category.image,
-      cat?.name.toTextWidget('r40') ?? nl,
+      cat?.name.toTextWidget('r40_cn_l_2') ?? nl,
       cat?.desc.toTextWidget('r16cn') ?? nl,
-      AppStrings.toPoint(cat?.points).toTextWidget("r14g"),
+      AppStrings.toPoint(cat?.points).toTextWidget("r20g"),
 
 
     ],
-  ).toCustomWidget(backgroundColor: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12).addTapGesture(() {
-    FBManager.increasePoints(cat?.points ?? 0);
+  ).toCustomWidget(backgroundColor: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12).addTapGesture(() async{
+
+
+   await FBManager.increasePoints(cat?.points ?? 0);
+  Get.to(ConfirmationSuccess(
+    showBubbleSplash: true,
+  reactColor: Colors.green,
+  child: nl,
+
+  ));
+   setDelay((){
+     AppNavigation.pop();
+   },seconds: 2);
+
   });
 } )
 ;
+
   })
 
 

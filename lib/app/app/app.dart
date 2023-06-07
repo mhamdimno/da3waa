@@ -1,7 +1,6 @@
 
 import 'package:get/get.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:lifecycle_lite/life_navigator_observer.dart';
 import 'package:da3wa/app/app/preapare_app.dart';
 import 'package:da3wa/app/enums.dart';
 import 'package:da3wa/app/extentions/dynamics_extentions.dart';
@@ -24,9 +23,7 @@ class MyApp extends StatelessWidget {
 
       return KeyboardDismissOnTap(
           child: GetMaterialApp(
-            navigatorObservers: [
-              LifeNavigatorObserver(),
-            ],
+
             defaultTransition: Transition.fade,
             //smartManagement: SmartManagement.keepFactory,
             theme: Appthemes.theme(),

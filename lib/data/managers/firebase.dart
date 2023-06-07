@@ -26,8 +26,10 @@ class FBManager{
   }
 
 
-  static increasePoints(int points){
-    user.then((value) => value!.increment(field: "points",value: points));
+  static Future increasePoints(int points)async{
+   await user.then((value) {
+      return  value!.increment(field: "points",value: points);
+    });
 
 }
 }

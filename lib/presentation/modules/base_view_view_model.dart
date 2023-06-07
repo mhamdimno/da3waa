@@ -1,25 +1,12 @@
 import 'package:cross_connectivity/cross_connectivity.dart';
 import 'package:flutter/material.dart';
-import 'package:lifecycle_lite/lifecycle_mixin.dart';
 import 'base_controller.dart';
 export 'base_controller.dart';
 import '../../../app/my_res.dart';
 
-abstract class BaseView<T extends BaseController> extends StatelessWidget with LifecycleStatelessMixin {
+abstract class BaseView<T extends BaseController> extends StatelessWidget {
   const BaseView({Key? key}) : super(key: key);
-  @override
-  void whenHide() {
-    setDelayMilliseconds(()=> isInSameScreen.value = true,milliseconds: 600);
 
-    con.whenHide();
-  }
-
-  @override
-  void whenShow() {
-    setDelayMilliseconds(()=> isInSameScreen.value = true,milliseconds: 600);
-
-    con.whenShow();
-  }
   T get con => GetInstance().find<T>();
 
   @override

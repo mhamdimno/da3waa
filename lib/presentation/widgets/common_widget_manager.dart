@@ -1,4 +1,7 @@
 
+import 'package:da3wa/app/extentions/numbers_extentions.dart';
+import 'package:delayed_display/delayed_display.dart';
+
 import '../../app/my_res.dart';
 
 class CommonWidgetManager{
@@ -41,16 +44,18 @@ static Widget get line => Container(
    color: Get.theme.splashColor,
  );
 
-static noIntenetWidget()=> Scaffold(
-    backgroundColor: Get.theme.secondaryHeaderColor,
-    body:  Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          AppImages.logo,
-          AppStrings.noNetWork.toTextWidget("b20l"),
-        ]).center);
-
+ static noIntenetWidget()=> Scaffold(
+     backgroundColor: Get.theme.secondaryHeaderColor,
+     body:  DelayedDisplay(
+       delay: 1.5.toDuration,
+       child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           crossAxisAlignment: CrossAxisAlignment.center,
+           children: [
+             AppImages.logo,
+             AppStrings.noNetWork.toTextWidget("b20y"),
+           ]).center,
+     ));
 
 
 }

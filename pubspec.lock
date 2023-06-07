@@ -209,6 +209,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.1"
+  confirmation_success:
+    dependency: "direct main"
+    description:
+      name: confirmation_success
+      sha256: "2c9a3f2b00ebdad4d8432ec508e8aefe32249382b7e613236879c40fb561b91a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   connectivity_plus:
     dependency: transitive
     description:
@@ -305,6 +313,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.8"
+  delayed_display:
+    dependency: "direct main"
+    description:
+      name: delayed_display
+      sha256: "8d722bb730071b872cef2bc0b07ef20549ebd269087a16ed1c5696896246c296"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   device_uuid:
     dependency: "direct main"
     description:
@@ -584,14 +600,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.8.1"
-  lifecycle_lite:
-    dependency: "direct main"
-    description:
-      name: lifecycle_lite
-      sha256: "17e4d7962ad001049c1961ac4e2b5b5cd4058cd5e49266ea2485d042b80ed97a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.3"
   logging:
     dependency: transitive
     description:
@@ -997,6 +1005,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  visibility_detector:
+    dependency: "direct main"
+    description:
+      name: visibility_detector
+      sha256: dd5cc11e13494f432d15939c3aa8ae76844c42b723398643ce9addb88a5ed420
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.0+2"
   watcher:
     dependency: transitive
     description:
