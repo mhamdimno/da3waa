@@ -4,7 +4,7 @@ import 'package:da3wa/data/managers/firebase.dart';
 class Trait{
   static  CheckScreen(){
     FBManager.isExistUser.then((value) {
-      AppNavigation.toRoute(value ? AppRouters.dashboard_route :  AppRouters.login);
+      AppNavigation.setRootScreen(value ? AppRouters.tabbar :  AppRouters.login);
     });
   }
 }

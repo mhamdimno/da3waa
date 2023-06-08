@@ -40,12 +40,12 @@ return Scaffold(
   backgroundColor:  screenType == ScreensType.pop
       ? Get.theme.splashColor.withOpacity(0.2)
       : clear_app_bar
-      ? Colors.brown
+      ? Colors.redAccent
       : Get.theme.primaryColorLight,
   //drawer: has_drawer == null ? null : DrawerManager.drawerWidget,
 
 appBar:
-appbarText == null || appbar_child == null
+appbarText == null
 ? null
     : AppbarManager.customAppBar(
 

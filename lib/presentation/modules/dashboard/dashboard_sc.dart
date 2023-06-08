@@ -4,6 +4,7 @@ import 'package:da3wa/presentation/modules/dashboard/drawer.dart';
 import 'package:da3wa/presentation/widgets/list_manager.dart';
 import 'package:firestore_model/firestore_model.dart';
 import 'package:flutter/foundation.dart';
+import 'package:searchable_listview/searchable_listview.dart';
 
 import '../../../app/my_res.dart';
 
@@ -69,34 +70,46 @@ class DashboardSC extends BaseView<DashboardController> {
 // you're query to get results
   builder: (_, snapshot) {
 
-return       ListManager.CustomGridView(list: snapshot.data, crossAxisCount: 4, spacing: AppSize.s20, builder:(index){
-  Cat? cat =  snapshot.data?[index];
-  return Column(
-    children: [
-      //    category.image,
-      cat?.name.toTextWidget('r40_cn_l_2') ?? nl,
-      cat?.desc.toTextWidget('r16cn') ?? nl,
-      AppStrings.toPoint(cat?.points).toTextWidget("r20g"),
+  return  SearchableList<Cat?>(
+      initialList: snapshot.data ?? [],
+      builder: (Cat? cat) => Row(
+        children: [
+          //    category.image,
+          cat?.name.toTextWidget('r40_cn_l_2') ?? nl,
+          cat?.desc.toTextWidget('r16cn') ?? nl,
+          AppStrings.toPoint(cat?.points).toTextWidget("r20g"),
 
 
-    ],
-  ).toCustomWidget(backgroundColor: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12).addTapGesture(() async{
+        ],
+      ).toCustomWidget(backgroundColor: Colors.white,corner: AppCorner.s20,horizontalPadding: 12).addTapGesture(() async{
 
 
-   await FBManager.increasePoints(cat?.points ?? 0);
-  Get.to(ConfirmationSuccess(
-    showBubbleSplash: true,
-  reactColor: Colors.green,
-  child: nl,
+        await FBManager.increasePoints(cat?.points ?? 0);
+        Get.to(ConfirmationSuccess(
+          showBubbleSplash: true,
+          reactColor: Colors.green,
+          child: nl,
 
-  ));
-   setDelay((){
-     AppNavigation.pop();
-   },seconds: 2);
+        ));
+        setDelay((){
+          AppNavigation.pop();
+        },seconds: 2);
 
-  });
-} )
-;
+      }),
+      filter: (value) => (snapshot.data ?? []).where((element) => element?.name?.toLowerCase().contains(value)==true).toList(),
+      emptyWidget: AppStrings.nodatafound.toTextWidget("b40"),
+      inputDecoration: InputDecoration(
+        labelText: AppStrings.login,
+        fillColor: Colors.yellow,
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.blue,
+            width: 1.0,
+          ),
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+      ),
+    );
 
   })
 

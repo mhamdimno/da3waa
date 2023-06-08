@@ -83,6 +83,8 @@ extension text_optianlExtentions on String? {
         break;
 
       default:
+        font_color = Colors.black;
+
     }
     return CustomText(this, font_size,
         fontFamily: font_family,

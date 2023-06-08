@@ -16,29 +16,29 @@ class tabbarSC extends BaseView<tabbar_con>  {
   vBuilder() =>Scaffold(
       body: GetxBottomBarView(
 
-      getPages: AppRouters,
+        getPages: AllPages.pages(),
       routes:  [
 
         AppRouters.dashboard_route,
-        AppRouters.dashboard_route,
+        AppRouters.users,
          ],
       defaultTransition: Transition.noTransition,
-      backgroundColor: Colors.yellowAccent,
+      backgroundColor: Colors.white,
 showActiveBackgroundColor: false,
       height: 70,
       itemPadding: EdgeInsets.zero,
 
       bottomBar: <GetBottomBarItem>[
         GetBottomBarItem(
-            activeColor: Get.theme.primaryColor,
-            icon:  Icon(CupertinoIcons.home),
-            inactiveColor: Colors.transparent
+            icon:  Icon(Icons.home),
+            activeColor: Colors.orange,
+            inactiveColor: Colors.grey
         ),
 
   GetBottomBarItem(
-      icon:  Icon(CupertinoIcons.person_2),
-        activeColor: Get.theme.primaryColor,
-        inactiveColor: Colors.transparent
+      icon:  Icon(Icons.person_2),
+        activeColor: Colors.orange,
+        inactiveColor: Colors.grey
   ),
 
 
