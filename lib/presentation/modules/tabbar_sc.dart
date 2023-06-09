@@ -14,6 +14,7 @@ class tabbar_con extends BaseController {
 class tabbarSC extends BaseView<tabbar_con>  {
   @override
   vBuilder() =>Scaffold(
+
       body: GetxBottomBarView(
 
         getPages: AllPages.pages(),
@@ -31,13 +32,13 @@ showActiveBackgroundColor: false,
       bottomBar: <GetBottomBarItem>[
         GetBottomBarItem(
             icon:  Icon(Icons.home),
-            activeColor: Colors.orange,
+            activeColor: ColorManager.primary,
             inactiveColor: Colors.grey
         ),
 
   GetBottomBarItem(
       icon:  Icon(Icons.person_2),
-        activeColor: Colors.orange,
+        activeColor: ColorManager.primary,
         inactiveColor: Colors.grey
   ),
 

@@ -10,9 +10,12 @@ class login_sc extends BaseView<login_con> {
   Widget vBuilder() => AppScaffold(
       isTransparent: true,
       children: [
-AppImages.logo,
+
+        AppStrings.entername.toTextWidget("r56l").paddingOnly(top: 100),
         CustomTextField(con.nameTEC),
-        ElevatedButton(onPressed: ()=>con.login(), child: AppStrings.login.toTextWidget("r12")),
+        ElevatedButton(onPressed: ()=>con.login(), child: AppStrings.confirm.toTextWidget("r24"),  style: ElevatedButton.styleFrom(
+            primary: ColorManager.helper
+        )),
 
       ],
       screenType: ScreensType.defeult);

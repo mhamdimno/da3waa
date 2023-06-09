@@ -8,6 +8,6 @@ class SplashSC extends BaseView<SplashController> {
   @override
   Widget vBuilder() => AppScaffold(
       isTransparent: true,
-      child: AppImages.logo.setScale(AppSize.s1_3).animate(AnimateType.zoomIn,duration: 2.seconds),
+      child: AppImages.logo.center.setCenter.setScale(AppSize.s1_3).animate(AnimateType.zoomIn,duration: 2.seconds),
       screenType: ScreensType.defeult);
 }

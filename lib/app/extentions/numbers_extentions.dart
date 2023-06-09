@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
@@ -6,6 +7,7 @@ import '../../presentation/resources/values_manager.dart';
 import '../functios.dart';
 
 extension intExtetntions on int {
+  int if_release(int v)=>kReleaseMode ? v:this;
 
   Duration get toDuration => Duration(seconds: this);
 
@@ -24,6 +26,8 @@ extension intExtetntions on int {
 }
 
 extension doubleExtetntions on double {
+  double if_release(double v)=>kReleaseMode ? v:this;
+
   double if_web(double v)=>is_web ? v:this;
 
   double if_tablet(double v)=> SizerUtil.deviceType == DeviceType.tablet ? v:this;

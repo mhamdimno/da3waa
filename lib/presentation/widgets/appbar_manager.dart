@@ -27,7 +27,7 @@ class AppbarManager{
               : Get.theme.primaryColorLight, //change your color here
         ),
         backgroundColor:
-        Colors.orange,
+        Colors.transparent,
         title: child ?? Text(tit == null ? "" : tit.tr.capitalize!));
   }
 }

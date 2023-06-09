@@ -20,6 +20,7 @@ class FBManager{
   }
   static Future<bool> get isExistUser =>  FirestoreModel.use<User>().exists(AppStorage.uuid);
   static Future<User?> get user =>  FirestoreModel.use<User>().find(AppStorage.uuid);
+  static Future<List<Cat?>> get cats =>  FirestoreModel.use<Cat>().all();
   static Future createUser(String v) async{
     User user = User(name: v, points: 0);
     await user.create(docId: AppStorage.uuid);

@@ -4,8 +4,8 @@ import '../../app/my_res.dart';
 
 class ColorManager {
 
-  static final Color primary = Colors.orange;
-  static final Color helper = "FF4A00".toColor;
+  static final Color primary = Colors.lightBlue;
+  static final Color helper = Colors.yellow;
   static final Color hint = "F2F2F3".toColor;
   static final Color light = "ffffff".toColor;
   static final Color dark = "061209".toColor;

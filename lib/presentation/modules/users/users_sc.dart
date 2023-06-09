@@ -24,9 +24,10 @@ appbarText: "الترتيب",
 
   ModelGetBuilder<User>(
 // you're query to get results
+
   builder: (_, snapshot) {
 
-return       ListManager.CustomListView(list: snapshot.data, child:(index){
+return       ListManager.CustomListView(list: snapshot.data,space: 20, child:(index){
   User? cat =  snapshot.data?[index];
   return Row(
      mainAxisAlignment: MainAxisAlignment.spaceBetween,

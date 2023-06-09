@@ -27,6 +27,7 @@ Widget CustomTextField(
       bool isCenter = false,
       bool secureText = false,
       ValueChanged<String>? onFieldSubmitted,
+      ValueChanged<String>? onChange,
       bool = false,
       bool isRequiredPopId = false,
       bool multiLine = false,
@@ -81,6 +82,7 @@ Widget CustomTextField(
           color: bgColor ?? input_background_color),
       child: TextFormField(
         onFieldSubmitted:onFieldSubmitted,
+        onChanged: onChange,
         controller: con,
         // maxLength: maxLength,
         //  maxLines: null,
@@ -98,6 +100,7 @@ Widget CustomTextField(
         style: TextStyle(
             fontSize: fontSize ??  type_font_size,
             fontFamily:  type_font_family,
+
             color: Get.theme.primaryColorDark),
         decoration: InputDecoration(
             label:  tf_type == InputType.border ? "${hint}".toTextWidget("r20t") : null,

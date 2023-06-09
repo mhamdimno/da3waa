@@ -23,7 +23,7 @@ class login_con extends BaseController {
 
   login(){
     if (nameTEC.text.isNotNullOrEmpty) {
-      FBManager.createUser(nameTEC.text).then((_) => AppNavigation.toRoute(AppRouters.dashboard_route));
+      FBManager.createUser(nameTEC.text).then((_) => AppNavigation.toRoute(AppRouters.tabbar));
     }
   }
   @override

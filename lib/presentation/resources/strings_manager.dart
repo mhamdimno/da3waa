@@ -7,6 +7,7 @@ class AppStrings {
   static String fillAllField = "جميع الحقول مطلوبة";
   static String enterAllPlayers = "قم بادخال جميع اسماء اللاعبين";
   static String enterPlayerName = "قم بادخال إسم اللاعب";
+  static String entername = "ادخل اسمك";
 
   static String nodatafound = "لايوجد بيانات";
   static String noNetWork = "لايوجد اتصال بالانترنت";

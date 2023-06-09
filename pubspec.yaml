@@ -34,7 +34,8 @@ dependencies:
   flutter_staggered_grid_view: ^0.4.0
   top_snackbar_flutter:
   confirmation_success:
-  searchable_listview:
+  firestore_search:
+
 
   # NETWORKING
   cross_connectivity:
