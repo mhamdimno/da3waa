@@ -22,7 +22,7 @@ class FBManager{
   static Future<User?> get user =>  FirestoreModel.use<User>().find(AppStorage.uuid);
   static Future<List<Cat?>> get cats =>  FirestoreModel.use<Cat>().all();
   static Future createUser(String v) async{
-    User user = User(name: v, points: 0);
+    User user = User(name: v,uuid: AppStorage.uuid);
     await user.create(docId: AppStorage.uuid);
   }
 

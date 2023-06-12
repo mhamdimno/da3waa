@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
    Sizer(
        builder: (context, orientation, deviceType) {
 
-        return KeyboardDismissOnTap(
+        return Keyboag
             child: GetMaterialApp(
 
              defaultTransition: Transition.fade,
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
              builder:initAppBuilder,
 
              getPages: AllPages.pages(),
-             locale: Locale(ConstantType.en.toStringEnumKey),
+             locale: Locale(ConstantType.ar.toStringEnumKey),
              enableLog: false,
              initialRoute: AppRouters.splash_route,
             )

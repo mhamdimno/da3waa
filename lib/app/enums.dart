@@ -5,7 +5,7 @@ enum ScreensType { dashboard, pop ,defeult}
 
 
 
-enum ConstantType { key, fail,failed, exception, msg, data, en }
+enum ConstantType { key, fail,failed, exception, msg, data, en,ar }
 
 enum InputType {normal, desc, border,underline }
 

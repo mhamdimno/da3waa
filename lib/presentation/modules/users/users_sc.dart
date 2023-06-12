@@ -24,22 +24,23 @@ appbarText: "الترتيب",
 
   ModelGetBuilder<User>(
 // you're query to get results
-
+      query: (q) => q.orderBy('points',descending: true),
   builder: (_, snapshot) {
 
 return       ListManager.CustomListView(list: snapshot.data,space: 20, child:(index){
-  User? cat =  snapshot.data?[index];
+  User? md =  snapshot.data?[index];
   return Row(
      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                    crossAxisAlignment: CrossAxisAlignment.center,
     children: [
       //    category.image,
-      cat?.name.toTextWidget('r20') ?? nl,
-      AppStrings.toPoint(cat?.points).toTextWidget("r20g"),
+      md?.name.toTextWidget('r20') ?? nl,
+
+      AppStrings.toPoint(md?.points).toTextWidget("r20g"),
       (index+1).toString().toTextWidget("r19")
 
     ],
-  ).toCustomWidget(backgroundColor: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12,verticalPadding: 10);
+  ).toCustomWidget(backgroundColor:  md?.uuid==AppStorage.uuid ? Colors.orange: Get.theme.hintColor,corner: AppCorner.s20,horizontalPadding: 12,verticalPadding: 10);
 } )
 ;
 

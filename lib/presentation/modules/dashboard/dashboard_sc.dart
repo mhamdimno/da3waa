@@ -58,13 +58,13 @@ class DashboardSC extends BaseView<DashboardController> {
                       }
                     },
                   ),
-                  Row(
-                    children: [
-                      AppImages.sort,
-                      arrange.value.toString().toString().toTextWidget(
-                          "b16_cnl")
-                    ],
-                  ).setSpaceBetweenChildrens(8),
+                  // Row(
+                  //   children: [
+                  //     AppImages.sort,
+                  //     arrange.value.toString().toString().toTextWidget(
+                  //         "b16_cnl")
+                  //   ],
+                  // ).setSpaceBetweenChildrens(8),
                 ]),
             CustomTextField(TextEditingController(), onChange: (v) {
               if (v.isNullOrEmpty){
