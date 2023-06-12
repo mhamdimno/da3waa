@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
    Sizer(
        builder: (context, orientation, deviceType) {
 
-        return Keyboag
+        return KeyboardDismissOnTap(
             child: GetMaterialApp(
 
              defaultTransition: Transition.fade,
